@@ -18,13 +18,13 @@
 <body>
     <div class="container-fluid">
         <!-- Navbar -->
-        <span ng-if="!clickLogin">  <nav ng-include="'layout/_menu.html'"></nav></span>
+        <span ng-if="!clickLogin">  <nav ng-include="layout/_menu.html"></nav></span>
         <!-- Carousel-->
-        <span ng-if="!clickLogin && showSlide"> <div ng-include="'layout/_carousel.html'"></div></span>
+        <span ng-if="!clickLogin && showSlide"> <div ng-include="layout/_carousel.html"></div></span>
 
         <div ng-view></div>
 
-        <span ng-if="!clickLogin"> <footer ng-include="'layout/_footer.html'"></footer></span>
+        <span ng-if="!clickLogin"> <footer ng-include="layout/_footer.html"></footer></span>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
