@@ -1,0 +1,41 @@
+/* .asideL {
+    height: auto;
+    width: 15%;
+    float: left;
+    margin-left: 20px;
+}
+
+.asideR {
+    height: auto;
+    width: 20%;
+    float: right;
+    margin-right: 20px;
+}
+
+article {
+    height: auto;
+    width: 60%;
+    float: left;
+    margin-left: 20px;
+}
+
+.asideKH {
+    height: auto;
+    width: 15%;
+    clear: both;
+    margin-left: 20px;
+    float: left;
+} */
+
+
+navbar-fixed-top {
+    position: relative;
+}
+
+/* ul li {
+    font-size: 15px;
+} */
+
+a:hover {
+    color: rgb(255, 115, 0) !important;
+}
