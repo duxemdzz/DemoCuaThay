@@ -1,0 +1,152 @@
+<div class="row ">
+
+    <!-- Navigation Left -->
+    <div class="col-md-2">
+
+        <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne">
+            
+                    <img src="images/iconfinder_26_Alphabet_2064501.png" height="40px" width="40px" />
+                    <a style="text-decoration: none; font-weight: bold; color: white;" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Môn học</a>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <a href="#!quiz/{{sb.Id}}" class="list-group-item" ng-repeat="sb in subjects"><img src="images/logos/{{sb.Logo}}" width="20px" height="20px"> {{sb.Name}}</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="panel-group" id="KhoaHoc" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <img src="images/iconfinder_world_eco_leaves_2992451.png" width="30px" height="30px">
+                    <a style="text-decoration: none; font-weight: bold; color: white;" role="button" data-toggle="collapse" data-parent="#KhoaHoc" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <span style="color:blue">Tin tức</span></a>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-circle-arrow-right"></span> Về việc tiếp tục cho học sinh, học viên nghỉ học để thực hiện các biện pháp phòng chống dịch bệnh Covid-19
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-circle-arrow-right"></span> Về việc những việc cần làm để phòng, chống dịch bệnh Covid-19 trong trường học
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-circle-arrow-right"></span> Về việc góp ý việc bãi bỏ Quyết định số 02/2017/QĐ-UBND ngày 04 tháng 01 năm 2017
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <img src="images/unnamed.jpg" width="100%" height="100%" />
+        </div>
+        <div class="">
+            <img src="images/unnamed (1).jpg" width="100%" height="100%" />
+        </div>
+        <div class="">
+            <img src="images/OknttlO.png" width="100%" height="100%" />
+        </div>
+
+    </div>
+    <!-- /.navigation-left -->
+
+    <!-- Content -->
+    <div class="col-md-8">
+        <article>
+
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a data-target="#noidung" aria-controls="noidung" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-edit"></span> Phương thức
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a data-target="#sanpro" aria-controls="sanpro" role="tab" data-toggle="tab">
+                        <span class="glyphicon glyphicon-th-list"></span> Nội dung
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="noidung">
+                    <br/>
+                    <p>Ứng dụng Góp ý (gopy.sangonl.gov.vn) là một kênh để người dân và du khách tham gia đóng góp ý, phản ánh các vấn đề trên địa bàn thành phố Đà Nẵng để các cơ quan nhà nước biết, kịp thời xử lý. Kết quả, tình hình xử lý góp ý, phản ánh
+                        được thông tin trên Ứng dụng để người dân, du khách biết (theo Quy chế của UBND thành phố).</p>
+                    <p style="font-weight: bold; font-size: 20px;">Các hình thức góp ý</p>
+                    <div>
+                        <ul style="list-style-type:1;">
+                            <li>Qua ứng dụng gopy.sangonl.gov.vn</li>
+                            <li>Qua Tổng đài ( 0236) 1022 hoặc *1022.</li>
+                            <li>Qua thư điện tử gopy@sangonl.gov.vn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="sanpro">
+                    <div class="">
+                        <form class="form-group">
+                            <label for="hoten">Họ và Tên</label>
+                            <input type="text" class="form-control" id="hoten" placeholder="Họ và Tên" />
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email" />
+                            <label for="sdt">Số điện thoại</label>
+                            <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại" />
+                            <label for="file">Đính kèm file</label>
+                            <input type="file" class="form-group" id="file" />
+                            <label for="noidung">Nội dung</label>
+                            <textarea class="form-control" rows="5" placeholder="Nội dung"></textarea>
+                            <button class="btn btn-success">Gửi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Navigation Right -->
+    <div class="col-md-2">
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <!-- <span class="glyphicon glyphicon-hourglass"></span> -->
+                <img src="images/iconfinder_books_514941.png" width="30px" height="30px" />
+                <span style="font-weight: bold; color: green;">Khóa học</span>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> Spring 2019</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> Summer 2019</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> Fall 2019</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> Spring 2020</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> Summer 2020</a>
+                </ul>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">Like
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">Share
+                        <span class="sr-only">80% Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">Comment
+                        <span class="sr-only">90% Complete</span>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="images/album3.jpg" width="100%" />
+                </div>
+                <div class="">
+                    <img src="images/standee.jpg" width="100%" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.navigation-right -->
+</div>
+</article>

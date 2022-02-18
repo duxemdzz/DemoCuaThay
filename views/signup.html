@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #fff;
+            padding: 30vh;
+        }
+        
+        .form-container {
+            width: 250px;
+            height: auto;
+            padding: 40px 30px;
+            background-color: orange;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #000;
+            margin: auto;
+            position: relative;
+        }
+        
+        ul.list {
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        ul.list li {
+            width: 250px;
+            margin-bottom: 15px
+        }
+        
+        ul.list li input {
+            width: 180px;
+            padding: 8px 8px;
+            border: none;
+            background-color: #d3d3d3;
+        }
+        
+        ul.list li input[type="button"] {
+            background-color: #4690fb;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <ul class="list">
+            <li>
+                <h2>Member Sign Up</h2>
+            </li>
+            <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fas fa-user-alt"></span><input type="text" placeholder="Username" /></li>
+            <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fa fa-unlock-alt"></span><input type="text" placeholder="Password" /></li>
+            <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fa fa-envelope"></span><input type="text" placeholder="Email" /></li>
+            <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fa fa-phone"></span><input type="text" placeholder="Phone" /></li>
+            <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fa fa-calendar"></span><input type="text" placeholder="Birthday" /></li>
+            <li>
+                <a href="login.html"><input type="button" value="Sign up" /></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

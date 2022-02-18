@@ -1,0 +1,50 @@
+<div class="container-fluid  navbar-fixed-top" style="background-color: rgb(248, 114, 3);">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="index.html" style="color:white; font-weight: bold;">
+                    <span class="glyphicon glyphicon-home"></span> Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li><a href="#!introduce" style="color:white;font-weight: bold;"><span class="glyphicon glyphicon-th-list"></span> Giới thiệu</a></li>
+            <li><a href="#!contact" style="color:white;font-weight: bold;"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+            <li><a href="#!feedback" style="color:white;font-weight: bold;"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a href="#!qa" style="color:white;font-weight: bold;"><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#!login" style="color:white;font-weight: bold;">
+                    <span class="glyphicon glyphicon-leaf"></span>
+                    <span ng-if="!chk">Đăng nhập</span>
+                    <span ng-if="chk">{{UserLogin}}</span>
+                </a>
+            </li>
+
+            <li class="dropdown" ng-if="chk">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;font-weight: bold;"><span class="glyphicon glyphicon-user"></span> Tài khoản <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#!login"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
+                    <li><a href="#!account"><span class="glyphicon glyphicon-refresh"></span> Đổi mật khẩu</a></li>
+                    <li><a href="#!myinfo"><span class="glyphicon glyphicon-edit"></span> Cập nhật thông tin</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#!profile"><span class="
+                            glyphicon glyphicon-eject"></span> Thành tích</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->

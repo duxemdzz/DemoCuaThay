@@ -1,0 +1,104 @@
+<div class="container" style="width: 1450px;">
+    <div class="row">
+        <div class="col">
+            <div class="panel panel-primary" ng-if="inProgress == 0">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="../images/logos/{{subjectInfo.Logo}}" alt="">
+                        </div>
+                        <div class="col-md-10">
+                            <p>Tên môn thi: {{subjectInfo.Name}}</p>
+                            <p>Mã môn thi: {{subjectInfo.Id}}</p>
+                            <button class="btn btn-primary" ng-click="start(); batdau()">Bắt đầu làm bài</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-primary" ng-if="inProgress == 1" ng-repeat="quiz in listQuestions | limitTo: 1 : begin">
+                <div class="panel-heading">
+
+                    <h3 class="panel-title">Môn: {{subjectInfo.Name}}
+                        <span style="margin-left: 1000px; font-size: 20px;"><img src="images/icons8-countdown-clock-40.png" />
+                            <span ng-if="mm < 10">0</span>{{mm}} :
+                        <span ng-if="ss < 10">0</span>{{ss}} </span>
+                    </h3>
+
+
+                </div>
+                <div class="panel-body">
+                    Câu {{begin + 1}}: {{quiz.Text}} <button class="btn btn-danger pull-right" ng-click="submit()">Kết thúc</button>
+                    <hr>
+                    <div class="radio" ng-repeat="answer in quiz.Answers">
+                        <label>
+                  <input type="radio" class="custom-control-input" value="{{answer.Id}}" ng-checked="answerId=={{answer.Id}}" ng-change="addAnswer(begin, {{answer.Id}})" ng-model="answerId"  name="answer"> {{answer.Text}}
+                </label>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary" ng-click="prev()">Prev</button>
+                    <button class="btn btn-primary pull-right" ng-click="next()">Next</button>
+                </div>
+            </div>
+            <div>
+                <div ng-if="inProgress == 2" class="panel panel-primary" style="margin-top: 150px;">
+
+                    <div class="panel-heading">
+                        <h3>Kết quả bài làm: {{subjectInfo.Name}}</h3>
+                    </div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>STT</th>
+                            <th>Câu hỏi</th>
+                            <th>Câu trả lời</th>
+                            <th>Đáp án</th>
+                            <th>Điểm</th>
+                        </tr>
+
+                        <tr ng-repeat="quiz in listQuestions">
+
+                            <td>{{$index+1}}</td>
+                            <td>{{quiz.Text}}</td>
+                            <td>
+                                <ul ng-repeat="answer in quiz.Answers">
+                                    <li>{{answer.Text}}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div ng-repeat="answer in quiz.Answers">
+                                    <li ng-if="quiz.AnswerId == answer.Id">{{answer.Text}}</li>
+                                </div>
+                            </td>
+                            <td>
+
+                                <div ng-repeat="x in listAnswers | limitTo : 1 : $index">
+
+                                    <span ng-if="x == quiz.AnswerId">
+                                        <img src="images/iconfinder_Tick_Mark_Dark_1398912.png" />                                      
+                                    </span>
+                                    <span ng-if="x != quiz.AnswerId">
+                                        <img src="images/iconfinder_Close_1891023.png" width="40px" height="40px"/>                                                                                                                
+                                    </span>
+                                    <!-- <span ng-if="x == null">
+                                        <img src="images/iconfinder_Close_1891023.png" width="40px" height="40px"/>a                                                                         
+                                    </span> -->
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center; font-size: 25px;">Tổng điểm</td>
+                            <td style="font-size: 25px;">{{mark}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <a href="index.html"><button class="btn btn-warning">Về trang chủ</button></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('images/18621.jpg');
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            max-width: 20%;
+            margin-top: 200px;
+            background-color: rgb(245, 181, 6);
+            border-radius: 5px;
+            height: 300px;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 30px;
+            position: absolute;
+            top: 380px;
+            right: 740px;
+        }
+        
+        .title {
+            font-size: 25px;
+            margin-top: 20px;
+        }
+        
+        .input-group {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="form-container">
+        <ul class="list">
+            <li>
+                <h2>Member Login</h2>
+            </li>
+            <form action="">
+                <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fas fa-user-alt"></span>
+                    <input type="text" placeholder="Username" ng-model="student.username" /></li>
+                <li><span style="vertical-align: middle !important; padding: 8px;background-color: red;border: none; color: #fff" class="fa fa-unlock-alt"></span>
+                    <input type="password" placeholder="Password" ng-model="student.password" /></li>
+                <li>
+                    <input ng-click="submit()" type="button" value="Login" />
+                </li>
+                <li>Don't you have an account? <a href="signup.html">Sign up</a></li>
+                <li><a href="#">Forget Password?</a></li>
+            </form>
+        </ul>
+    </div> -->
+
+    <div class="container">
+        <form>
+            <img src="images/iconfinder_--09_1720773.png" width="15%" height="15%" />
+            <label class="title">Login TST</label>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" ng-model="student.username">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2" ng-model="student.password">
+            </div>
+            <div><span ng-if="failLogin" style="color: red; float: left;">Login fail</span></div>
+            <!-- <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                 </label>
+            </div> -->
+            <button type="submit" class="btn btn-success" ng-click="submit()">Login</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

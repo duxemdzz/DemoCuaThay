@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ASS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        .body {
+            background-color: whitesmoke;
+        }
+        
+        .info {
+            margin-left: 5%;
+            margin-top: 20px;
+        }
+        
+        .info>a {
+            font-size: 16px;
+        }
+        
+        .myinfo {
+            margin-left: 2%;
+        }
+        
+        .myimage {
+            width: 120px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        .bodyinfo {
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <!-- /.container-fluid -->
+    <div style="width: 80%;margin: auto;margin-top: 80px;">
+        <div class="row">
+            <div class="col-sm-3 bodyinfo " style="background-color: white;">
+                <div class="info">
+                    <div>
+                        <label><a href="#!myinfo">Quản Lí Thông Tin Cá Nhân</a></label>
+                    </div>
+                    <div>
+                        <label><a href="#!account">Quản Lí Thông Tin Tài Khoản</a></label>
+                    </div>
+                    <div>
+                        <label><a href="#!profile">Quản Lí Hồ Sơ</a></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 bodyinfo" style="margin-left: 1%;background-color: white;">
+                <div class="row myinfo">
+                    <h2 style="color: dodgerblue;">Thông tin</h2>
+                    <div class="col-sm-3">
+                        <img class="myimage" src="images/nv4.jpg" />
+                    </div>
+                    <div ng-hide="edit" class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Họ và tên</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span>{{students.fullname}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Ngày sinh</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span>{{students.birthday}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Giới tính</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span ng-show="students.gender">Nam</span>
+                                    <span ng-show="!students.gender">Nữ</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Địa chỉ Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span>{{students.email}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Schoolfee</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span>{{students.schoolfee}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name">Marks</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <span>{{students.marks}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form ng-show="edit" class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Họ và tên</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input ng-model="students.fullname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Ngày sinh</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input ng-model="students.birthday">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Giới tính</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <!-- <select ng-model="students.gender">
+                                        <option value="true">Nam</option>
+                                        <option value="false">Nữ</option>
+                                    </select> -->
+                                    Nam <input type="radio" ng-model="students.gender" name="gender"> Nữ
+                                    <input type="radio" ng-model="students.gender" name="gender">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Địa chỉ Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input ng-model="students.email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name" a>Schoolfee</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input ng-model="students.schoolfee">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name">Mark</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input ng-model="students.marks">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10">
+
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    <button ng-click="save()" class="btn btn-default">Lưu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-sm-1">
+                        <div>
+                            <a><span ng-click="edits()" class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row myinfo">
+                    <h2 style="color: dodgerblue;">Trình độ học vấn</h2>
+                    <div class="myinfo">
+                        <label style="display: block;"> Mô tả trình độ học vấn của bạn</label>
+                        <a><span class="glyphicon glyphicon-plus-sign" style="font-size:30px ;"></span></a>
+                    </div>
+                    <div class="col-sm-11">
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Trường</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span>Cao đăng FPT Polytechnic</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Chuyên ngành</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span>Ứng dụng phần mềm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div>
+                            <a><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row myinfo">
+                    <h2 style="color: dodgerblue;">Kinh nghiệm</h2>
+                    <div class="myinfo">
+                        <label style="display: block;"> Mô tả kinh nghiệm làm việc của bạn</label>
+                        <a><span class="glyphicon glyphicon-plus-sign" style="font-size:30px ;"></span></a>
+                    </div>
+                    <div class="col-sm-11">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Công ty</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span>...............</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Chuyên ngành</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span>...............</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Thời gian làm việc</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <span>...............</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <div>
+                            <a><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
